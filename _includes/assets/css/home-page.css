@@ -84,3 +84,9 @@
     margin-top: 3rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .about-section {
+    max-width: 550px;
+  }
+}

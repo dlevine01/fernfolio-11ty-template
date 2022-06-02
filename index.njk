@@ -8,9 +8,7 @@ section: home
   <div class="hero">
     <div class="hero__col">
       <h1 class="hero__title gradient-text">{{ home.title }}</h1>
-      {% if home.subtitle %}
-        <h4 class="hero__subtitle">{{ bio.subtitle }}</h4>
-      {% endif %}
+      <h4 class="hero__subtitle">{{ bio.subtitle }}</h4>
     </div>
     <div class="hero__col">
       <img
@@ -24,9 +22,9 @@ section: home
   </div>
 
   <hr>
-  <p>{{ bio.summary }}</p>
-  <a href='/about'>About me</a>
-
+  <div class="about-section">
+    <p class="her-_subtitle">{{ bio.summary }} <a href='/about'>About me</a></p>
+  </div>
 
   <hr>
   <h2>Projects</h2>
