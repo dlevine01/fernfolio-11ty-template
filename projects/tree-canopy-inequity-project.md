@@ -1,6 +1,6 @@
 ---
-title: measure inequity in tree canopy change
-emoji: 🌳
+title: Measure inequity in tree canopy change
+emoji: 🍃
 metaDescription: Tree canopy equity analysis in New York City
 date: 2022-04-01T00:00:00.000Z
 summary: Use high-resolution data to measure tree canopy change across New York City and use analysis tools to evaluate equity. 

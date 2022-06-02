@@ -1,22 +1,34 @@
 ---
 title: About Me
-subtitle: Dan Levine uses data and policy to make cities  better places
-metaDescription: This page is all about me
+metaDescription: This page is about me and my work
 date: 2022-01-01T00:00:00.000Z
 permalink: /about/index.html
 eleventyNavigation:
   key: About
   order: 1
 ---
-# Dan Levine
+<!--
 ![Dan](/static/img/portrait.JPG)
-
-## creative data policy city person
-I make cities better for the people who live in them
-- policy
-- data
-- yada yada
+-->
+![Dan - placeholder](https://picsum.photos/500)
 
 
+<!--   use this to pull from bio.json stored in _data folder
 
-Also, I like to eat good food
+
+#### {{ bio.subtitle }}
+
+{{ bio.summary }}
+
+{{ bio.longer}} 
+
+-->
+
+##### I help to build more resilient, equitable cities by reshaping city policy. 
+
+I use spatial analysis, mapping, and data science to understand and interpret interlocking urban challenges.
+
+I work with communities to identify challenges, communicate needs, and advocate for reform.
+
+Through grounded research and effective communication, I bring about policy change and practical reform. 
+
