@@ -7,13 +7,13 @@ summary: Use high-resolution data to measure tree canopy change across New York 
 tags:
   - spatial analysis
   - Python
-  - open data
+  - big data
 ---
 
 ### measure inequity in tree canopy change
-Extreme heat is one of the most dangerous weather events and an increasing threat under climate change. Tree cover provides shade and absorbs heat, blunting some of the effects of the 'urban heat island.' New York City's MillionTrees campaign added trees citywide. 
+Extreme heat is one of the most dangerous weather events and an increasing threat under climate change. Tree cover provides shade and absorbs heat, blunting some of the effects of the 'urban heat island.' New York City's MillionTrees campaign added trees citywide, but did tree cover reach the neighborhoods with hte greatest vulnerability to extreme heat?
 
-Using extremely high resolution LiDAR data capturing change in tree canopy cover, this project assessed whether the changes in tree cover were equitable.
+Using high resolution LiDAR data capturing tree canopy cover, this project assessed whether the changes in tree cover were equitable.
 
 ![NYC LiDAR](/static/img/LiDAR.jpg)
 
