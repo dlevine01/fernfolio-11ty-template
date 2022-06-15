@@ -7,10 +7,14 @@
 
 .page-container img {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   max-width: 700px;
   margin: 4rem auto;
 }
+
+/* .page-container p, li {
+  font-family: var(--font-family-story);
+} */
 
 .shadow {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),

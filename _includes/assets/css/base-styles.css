@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   line-height: 1.618;
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -25,7 +25,7 @@ main {
 
 @media (max-width: 684px) {
   body {
-    font-size: 1.53rem; 
+    font-size: 1.6rem; 
   } 
 }
 
@@ -94,7 +94,8 @@ ul {
   margin-bottom: 2.5rem; }
 
 li {
-  margin-bottom: 0.4em; }
+  margin-bottom: 0.4em;
+  list-style-type: square; }
 
 blockquote {
   margin-left: 0px;

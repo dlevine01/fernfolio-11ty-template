@@ -27,6 +27,7 @@
 .project-card__tag {
   background-color: var(--color-secondary);
   color: var(--color-text-alt);
+  font-family: var(--font-family-heading);
 }
 
 .project-card__tag:hover {
@@ -34,6 +35,6 @@
   filter: brightness(90%);
 }
 
-.project-card__emoji {
+/* .project-card__emoji {
   margin-right: 8px;
-}
+} */

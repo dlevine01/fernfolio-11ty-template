@@ -10,6 +10,18 @@ section: project
     {{title}}</h1>
   <hr>
   {{ layoutContent | safe }}
+
+
+  <p class="tag-list">
+    {% for tag in post.data.tags %}
+      {%- if tag != "post" -%}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a class="tag" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+      {%- endif -%}
+    {% endfor %}
+  </p>
+
+
   <nav>
     <a href="{{ '/projects/' | url }}">← View All Projects</a>
   </nav>
