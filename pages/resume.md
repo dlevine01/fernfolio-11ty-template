@@ -1,11 +1,11 @@
 ---
-title: Work
+title: Resume
 subtitle: ""
 date: 2021-03-15T06:33:06.713Z
-permalink: /work/index.html
+permalink: /resume/index.html
 eleventyNavigation:
   order: 3
-  key: Work
+  key: Resume
 ---
 ### Experience:
 
@@ -24,7 +24,7 @@ Washington, D.C. | 2012-2018
 
 Developed and analyzed policy, managed outreach programs, and worked with elected leaders to enact legislative reforms prioritizing city needs.
 
-- Trained city leaders and helped launch successful ballot measure campaigns that secured hundreds of millions of dollars in new funding for public transit.
+- [Trained city leaders](/project-tags/training/) and helped launch successful ballot measure campaigns that secured hundreds of millions of dollars in new funding for public transit.
 - Advocated for and helped implement state laws to set performance measures that prioritize safety, sustainability, and economic opportunity in states’ selection of transportation projects.
 - Researched transportation policies and wrote easy-to-understand reports on why policy reforms were needed to make urban transportation systems benefit city residents.
 
