@@ -11,16 +11,17 @@ section: project
   <hr>
   {{ layoutContent | safe }}
 
-
-  <p class="tag-list">
-    {% for tag in post.data.tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a class="tag" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+  {% if tags %}
+    <h2>Skills</h2>
+    <p class="tag-list">
+    {% for tag in tags %}
+      {%- if tag != "project" -%}
+        {% set tagUrl %}/project-tags/{{ tag }}/{% endset %}
+        <a class="project-card__tag tag" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
       {%- endif -%}
     {% endfor %}
-  </p>
-
+    </p>
+  {% endif %}
 
   <nav>
     <a href="{{ '/projects/' | url }}">← View All Projects</a>
