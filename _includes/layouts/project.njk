@@ -7,10 +7,10 @@ section: project
     {% if emoji %}
       <span class="project-card__emoji">{{ emoji }}</span>
     {% endif %}
-    {{title}}</h1>
+    {{ title }}</h1>
   <hr>
   {% if coverImage %}
-    <img src="{{ coverImage | url }}" class="project_cover_img" alt="{{ title }}">
+    <img src="{{ coverImage | url }}" class="project_cover_img" alt="{{ title }}" height="200px" />
   {% endif %}
 
   {{ layoutContent | safe }}
