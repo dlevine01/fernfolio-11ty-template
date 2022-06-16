@@ -9,6 +9,10 @@ section: project
     {% endif %}
     {{title}}</h1>
   <hr>
+  {% if coverImage %}
+    <img src="{{ coverImage | url }}" class="project_cover_img" alt="{{ title }}">
+  {% endif %}
+
   {{ layoutContent | safe }}
 
   {% if tags %}
@@ -27,3 +31,4 @@ section: project
     <a href="{{ '/projects/' | url }}">← View All Projects</a>
   </nav>
 </div>
+
