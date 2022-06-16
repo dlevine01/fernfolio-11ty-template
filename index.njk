@@ -13,7 +13,7 @@ section: home
     <div class="hero__col">
       <img
         class="hero__image shadow"
-        src="{% if home.image %}{{ home.image }}{% else %}https://source.unsplash.com/random/600x600{% endif %}"
+        src="{% if home.image -%}{{ home.image }}{%- endif %}"
         alt="{{ home.image_alt }}"
         width="1000px"
         height="1000px"
@@ -31,8 +31,8 @@ section: home
   {% set projectlist = collections.project %}
   {% include "components/projectlist.njk" %}
 
-
 {# hide 'Articles' (blog) (until there is something to put there) #}
+
 {# 
   <hr>
   <h2>Articles</h2>
@@ -40,5 +40,6 @@ section: home
   {% set show_postslist_tags = false %}
   {% set limit = 3 %}
   {% include "components/postslist.njk" %}
-   #}
+  #}
+
 </div>
