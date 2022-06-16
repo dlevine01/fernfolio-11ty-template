@@ -2,6 +2,11 @@
   publish = "_site"
   command = "eleventy"
 
+
+[[plugins]]
+package = "netlify-plugin-image-optim"
+
+
 # REDIRECT and HEADERS examples
 
 # Redirect rule example
