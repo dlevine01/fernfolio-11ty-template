@@ -28,7 +28,11 @@
     max-width: 35%;
     min-width: 300px;
     border-radius: var(--border-radius);
-    background-color: var(--color-bg-accent);
+    /* background-color: var(--color-bg-accent); */
+    border-style: solid;
+    border-right-style: none;
+    border-width: 8px;
+    border-color: var(--color-bg-accent);
     z-index: -1;
   }
 }

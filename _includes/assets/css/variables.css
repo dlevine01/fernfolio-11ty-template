@@ -28,6 +28,6 @@
   --site-width: 800px;
 
   /* Other */
-  --border-radius: 12px;
-  --border-radius-sm: 5px;
+  --border-radius: 0px;
+  --border-radius-sm: 0px;
 }
