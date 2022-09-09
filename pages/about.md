@@ -7,11 +7,13 @@ eleventyNavigation:
   key: About
   order: 1
 ---
-<!--
-![Dan](/static/img/portrait.JPG)
--->
-![Dan - placeholder](https://picsum.photos/500)
 
+![Dan](/static/img/portrait.JPG)
+
+
+<!--
+![Dan - placeholder](https://picsum.photos/500)
+-->
 
 <!--   use this to pull from bio.json stored in _data folder
 
@@ -28,7 +30,7 @@ eleventyNavigation:
 
 I use spatial analysis, mapping, and data science to understand and interpret interlocking urban challenges.
 
-I work with communities to identify challenges, communicate needs, and advocate for reform.
-
 Through grounded research and effective communication, I bring about policy change and practical reform. 
+
+I work with communities to uncover issues, convey local needs, and advocate for policy change. 
 
