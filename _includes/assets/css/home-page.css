@@ -67,6 +67,8 @@
   /* keep this ^ from template for rounded rectange; keep below for more rounded. */
   /* border-radius: 100%;  */
   transition: filter 0.4s ease-out;
+  max-width: 50%;
+  border-radius: 50%;
 }
 
 .hero__title {
