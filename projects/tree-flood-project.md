@@ -3,7 +3,7 @@ title: Design analysis for NYC Parks to mitigate flood risk
 emoji: 🌳
 metaDescription: design analysis for NYC Parks to mitigate flood risk project description
 date: 2021-12-01T00:00:00.000Z
-summary: A designed analysis to focus tree planting where it can most reduce flood risk
+summary: I designed analysis to focus tree planting where it can most reduce flood risk
 tags:
   - program development
   - writing
