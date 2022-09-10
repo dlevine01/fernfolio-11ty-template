@@ -1,11 +1,11 @@
 ---
-title: Find where investments in broadband access will close the digital divide and boost local economies
+title: Find where broadband access will close the digital divide and boost local economies
 emoji: 🖥
 metaDescription: Evaluate connections between broadband expansion and equitable economic prosperity
 date: 2022-08-15T00:00:00.000Z
-summary: Mapping connections between broadband expansion and equitable economic prosperity
+summary: Locate areas where improving access to broadband internet can spur equitable growth, nationwide at a fine-grain scale.
 tags:
-  - machine learning
+  - data science
   - spatial analysis
 ---
 

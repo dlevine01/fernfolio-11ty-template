@@ -1,6 +1,6 @@
 ---
-title: Measure inequity in penalties for low-level infractions
-emoji: 
+title: Detect inequity in penalties for low-level infractions
+emoji: 🗓
 metaDescription: analysis of arrest warrant data from Austin, TX to identify inequities
 date: 2022-05-01T00:00:00.000Z
 summary: "Minor non-criminal citations (like tickets for loitering) can be elevated to arrest warrants if those cited can’t pay off fines. This project found new data to test the true scale of those facing arrest for these minor violations, then identified the inequitable patterns in how warrants were assigned across income groups."

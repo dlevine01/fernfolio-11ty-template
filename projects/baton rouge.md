@@ -1,9 +1,9 @@
 ---
-title: Help choose where to develop affordable housing and where to build stormwater-absorbing green infrastructure
+title: Select where to build affordable housing and where to create green space
 emoji: 🏡
 metaDescription: model stormwater risk 
 date: 2022-08-20T00:00:00.000Z
-summary: Help an urban redevelopment agency in flood-affected Baton Rouge decide which of its properties to redevelop and which to convert to flood-absorbing green spaces.
+summary: Help an urban redevelopment agency in flood-affected Baton Rouge decide which of its properties to redevelop as affordable housing and which to convert to stormwater-absorbing green spaces.
 tags:
   - program development
   - spatial analysis
@@ -15,7 +15,7 @@ tags:
 
 ### Project context
 The Baton Rouge region sits inland from the Gulf shore but is affected by coastal storms and by inland flooding of the Amite River. The oldest part of the city sits on relatively high ground, but many of these neighborhoods have faced divestment, while the in-migration to the area (including a population forced to retreat from flood-ravaged coastal areas) has spread out from the city core, into low-lying and more risky areas. Devastating floods in recent years have highlighted the risk of this development and the threat to new residents unwittingly sold homes in hazardous areas, while at the same time growth across the region has jacked up home values and made affordable housing a more urgent concern.
-
+ 
 Build Baton Rouge is a land bank agency that takes title of vacant, abandoned, or deteriorated properties and looks for opportunities to redevelop them in ways that will strengthen their neighborhoods and reverse local economic declines. With a portfolio across the city, it is important to understand where the best locations are to redevelop as affordable housing and which are more valuable places to restore green spaces that can serve as park and neighborhood spaces and can also mitigate stormwater flood risk.
 
 ## Mapping and analysis
