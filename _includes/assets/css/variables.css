@@ -18,8 +18,10 @@
   --color-danger: #e03e3e;
 
   /* Typography */
-  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-family-base: 'Montserrat', sans-serif;
+ /* -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif
+  */;
   --font-family-heading: var(--font-family-base);
   --font-family-story: Garamond, Georgia, serif;
 
