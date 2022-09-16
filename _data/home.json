@@ -1,7 +1,7 @@
 {
   "title": "Hi, I’m Dan",
-  "backgroundImage": "/static/img/predicted-parcel-map-1.png",
-  "backgroundImageAlt": "map of NYC parcels",  
+  "backgroundImage": "/static/img/forecast-bins-map-with-properties.png",
+  "backgroundImageAlt": "map of forecast affordable housing",  
   "featureImage":"/static/img/portrait.JPG",
   "featureImageAlt":"Dan",
   "subtitle": "I help to build more resilient, equitable cities by reshaping city policy."
