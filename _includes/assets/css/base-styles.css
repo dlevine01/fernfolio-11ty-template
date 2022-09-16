@@ -76,7 +76,8 @@ small, sub, sup {
   font-size: 75%; }
 
 hr {
-  border-color: var(--color-border); }
+  display: none; }
+  /* border-color: var(--color-border); } */
 
 a {
   text-decoration: none;
