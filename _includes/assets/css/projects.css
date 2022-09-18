@@ -17,7 +17,12 @@
   flex-direction: column;
   justify-content: center;
   padding: 15px 30px;
+  /* border: 2px solid var(--color-border); */
+}
+
+.project-card:hover {
   border: 2px solid var(--color-border);
+  padding: 13px 28px;
 }
 
 .project-card__title {
