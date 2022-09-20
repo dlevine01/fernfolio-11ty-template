@@ -8,7 +8,7 @@ permalink: /about/index.html
 eleventyNavigation:
   key: About
   order: 1
-headShot: static/img/portrait.jpg
+headShot: /static/img/portrait.jpg
 ---
 
 <!--
@@ -29,4 +29,3 @@ I use spatial analysis, mapping, and data science to understand and interpret in
 Through grounded research and effective communication, I bring about policy change and practical reform. 
 
 I work with communities to uncover issues, convey local needs, and advocate for policy change. 
-

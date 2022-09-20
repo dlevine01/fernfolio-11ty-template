@@ -1,5 +1,5 @@
 .headshot {
-    max-width: 75% ;
+    max-width: 85% !important;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -12,10 +12,10 @@
     position: relative;
   }
   
-@media (min-width: 1024px) {
-    .page-container {
+@media (min-width: 700px) {
+    .about-container {
         grid-template-columns: 3fr 8fr;
-        grid-row-gap: 20px;
+        column-gap: 5rem;
         margin: 50px auto;
     }
 }
