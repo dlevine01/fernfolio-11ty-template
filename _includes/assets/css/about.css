@@ -1,0 +1,21 @@
+.headshot {
+    max-width: 85% !important;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+@media (min-width: 700px) {
+    .about-container {
+        grid-template-columns: 3fr 8fr;
+        column-gap: 5rem;
+        margin: 50px auto;
+    }
+}

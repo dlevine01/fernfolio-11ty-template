@@ -1,0 +1,21 @@
+---
+layout: /layouts/base.njk
+section: about
+---
+<div class="page-container">
+  <h1>{{ title }}</h1>
+    <div class="about-container">
+        <div class="headshot-container">
+            {% if headShot %}
+                <img src="{{ headShot | url }}" class="headshot" alt="headshot" height="200px" />
+            {% endif %}
+        </div>
+            <div class="text-container">
+            {{ layoutContent | safe }}
+            <nav>
+                <a href="{{ '/projects/' | url }}">Check out my projects</a> or <a href="{{ '/contact/' | url }}">get in touch</a>!
+            </nav>
+        </div>
+    </div>
+</div>
+
