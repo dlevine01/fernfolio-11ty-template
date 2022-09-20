@@ -8,7 +8,6 @@ tags:
 - data science
 - spatial analysis
 - policy evaluation
-- mapping
 ---
 
 ![forecast bins](/static/img/forecast-bins-map-with-properties.png)
