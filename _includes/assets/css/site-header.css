@@ -8,24 +8,22 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 15px auto;
+  font-size: 1.5rem;
+
 }
 
 @media (min-width: 1024px) {
   .site-header {
     padding: 15px 30px;
   }
-}
 
-.site-header__logo-container {
-  margin: 0 auto;
-}
-
-@media (min-width: 1024px) {
-  .site-header__logo-container {
-    margin: 0;
+  .site-header__container{
+    font-size: 1.9rem;
   }
 }
+
+
 
 .site-header__logo {
   width: 25px;
@@ -34,15 +32,8 @@
 }
 
 .site-header__nav {
-  width: 100%;
-  margin-top: 15px;
-}
-
-@media (min-width: 1024px) {
-  .site-header__nav {
-    width: auto;
-    margin-top: 0;
-  }
+  width: auto;
+  margin-top: 0;
 }
 
 .site-header__items {
@@ -57,8 +48,6 @@
 
 .site-header__item {
 	margin: 0 6px;
-  font-weight: 500;
-  font-size: 14px;
   list-style-type: none; 
 }
 
