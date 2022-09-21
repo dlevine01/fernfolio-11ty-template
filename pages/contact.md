@@ -11,4 +11,4 @@ eleventyNavigation:
   order: 5
 ---
 
-Need some data, analysis, policy, or writing help on a project? Have a question about something I've worked on? Have something to share? Say hi!
+Need some data, analysis, policy, or writing help on a project? Have a question about something I’ve worked on? Have something to share? Say hi!
