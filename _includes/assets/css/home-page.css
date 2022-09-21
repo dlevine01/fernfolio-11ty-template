@@ -91,12 +91,21 @@
   position:absolute;
   left: auto;
   right: 0;
+  top: 15%;
   z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .hero__background {
+    padding: auto;
+  }
 }
 
 .hero__background-image {
   max-height: 140%;
 }
+
+
 
 .hero__title {
   margin-top: 0;
@@ -126,6 +135,7 @@
 
 @media (min-width: 1024px) {
   .hero__about {
+    padding: 0;
     margin-top: 0;
     background-color: transparent;
   }
