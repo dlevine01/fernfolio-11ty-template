@@ -9,7 +9,7 @@ tags:
   - spatial analysis
   - green infrastructure
 ---
-![Baton Rouge modeled flood risk](static/img/retention-close-up.png)
+![Baton Rouge modeled flood risk](/static/img/retention-close-up.png)
 
 ## Challenge
 Baton Rouge faces growing flood risk from climate change and challenges from rapid growth and escalating housing costs as the region’s population booms. However, core parts of the city still suffer from divestment. Build Baton Rouge was recently formed as a redevelopment agency tasked with revitalizing neighborhoods by improving vacant, abandoned, and deteriorating properties. To help the region grow sustainably, the agency needs to select which parcels to develop as new affordable housing and which sites to repurpose as parks and green spaces that can be nature-based buffers against stormwater. 
@@ -20,7 +20,7 @@ To help kick off this applied research project, I modeled the physical flood ris
 ## Insights
 Modelling the stormwater runoff in a heavy rainstrom shows that the lower basins of the Amite River—in the neighborhoods of southern and eastern Baton Rouge—generate the most intense flood runoff. 
 
-![subbasin map](static/img/Amite-basins-flood-risk-intensity.png)
+![subbasin map](/static/img/Amite-basins-flood-risk-intensity.png)
 _Stormwater flood generation intensity is greatest in the lower subbasins of the Amite River_
 
 The northern watersheds of the Amite River, meanwhile, have the most potential to absorb rainwater in heavy storms (and thereby reduce downstream flooding). These areas are still predominantly rural, but face pressure for new development which could destroy the natural absorbent landscape. 
