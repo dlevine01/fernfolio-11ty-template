@@ -46,6 +46,8 @@
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
+  font-family: var(--font-family-home-page);
+  font-weight: var(--font-weight-home-page);
 }
 
 @media (min-width: 1024px) {

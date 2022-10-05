@@ -6,7 +6,9 @@
 /* Body */
 html {
   font-size: 62.5%;
-  font-family: var(--font-family-base); }
+  font-family: var(--font-family-base); 
+  font-weight: var(--font-weight-base);
+}
 
 body {
   display: flex;
