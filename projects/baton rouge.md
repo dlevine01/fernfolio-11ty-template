@@ -1,5 +1,5 @@
 ---
-title: Help a redevelopment agency choose where to build housing and where to restore flood-mitigating green space.
+title: Help a redevelopment agency choose where to build housing and where to restore flood-mitigating green space
 emoji: 🏡
 metaDescription: model stormwater risk 
 date: 2022-08-20T00:00:00.000Z
