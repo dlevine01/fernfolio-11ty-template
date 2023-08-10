@@ -35,8 +35,6 @@ to actual mappable locations.
 <details>
     <summary>
     I used the the City's Geosupport tool, a custom (and finicky) geocoder for New York City addresses, to locate these tickets. 
-    
-    
     </summary>
 
 
@@ -56,10 +54,8 @@ Geosupport has voluminous [documentation](https://nycplanning.github.io/Geosuppo
 </details>
 
 <details>
-   Actually running addresses through Geosupport, especially 50 million or so records, took  <summary>
-    some data engineering.
-    
-    
+    <summary>
+    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering.
     </summary>
 
 
