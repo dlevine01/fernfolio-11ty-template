@@ -23,14 +23,6 @@ For a relatively straightforward question, preparing the data and structuring th
 
 The City’s Department of Revenue publishes on NYC Open Data records of [all parking tickets](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2023/pvqr-7yc4/data)—some 12 million per year—but these records are not geolocated to a point on the map. So the first step for any geographic analysis was to convert locations that could look like:
 
-```csvpreview {header="true"}
-Violation County,House Number,Street Name,Intersecting Street
-NY,,W 28TH ST,CHELSEA PK
-NY,436,27TH DR,
-Q,,B 97 ST,SHORE FT PKWY
-K,60,FURMAN ST,
-```
-
 | Violation County | House Number | Street Name | Intersecting Street
 | ---- | ---- | --- | --- |
 | NY |  | W 28TH ST | CHELSEA PK
@@ -38,15 +30,16 @@ K,60,FURMAN ST,
 | Q |  | B 97 ST | SHORE FT PKWY
 | K | 60 | FURMAN ST | 
 
-
 to actual mappable locations.
 
 <details>
     <summary>
-    I used the Department of City Planning-maintained [Geosupport](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page) tool, a custom geocoder for New York City addresses. 
+    I use of the the City's Geosupport tool, a custom geocoder for New York City addresses, to locate these tickets. 
     </summary>
 
-Geosupport is a powerful tool, but also somewhat klunky to use and exacting in it's needs. 
+
+
+The Department of City Planning-maintained [Geosupport](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page) is a powerful tool, but also somewhat klunky to use and exacting in its needs. 
 
 On the plus side, it knows how to handle quirky New York City addresses, like Queens house numbers with dashes in the middle, or repeated street names.  And, in addition to latitude/longitude point locations, it also returns local administrative geographies, like Community District, Census Tract, Police precinct, and street segment code, and projected X/Y point locations.
 
@@ -62,8 +55,11 @@ Geosupport has voluminous [documentation](https://nycplanning.github.io/Geosuppo
 
 <details>
     <summary>
-    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering:
+    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering
     </summary>
+
+
+
 
 I used the [python-geosupport](https://python-geosupport.readthedocs.io/en/latest/) binding to include the search within a Python data pipeline. I needed to do lots of up-front data cleaning to create addresses Geosupport would (mostly) recognize, then send addresses through either the house number-street address search or street name-other street name intersection search, depending on what information was available. 
 
@@ -80,7 +76,7 @@ The analysis question was, essentially, about _which_ New Yorkers are targeted f
 2) filtering to tickets issued not on commercials streets (that is, spatially filtering to exclude tickets on streets within or adjacent to commercial or commercial overlay zoning)
 3) removing certain categories of tickets that would not effect residents (e.g. missing bus permit)
 4) normalizing the number of tickets in each tract by the number of households with one or more vehicle. This normalized rate I considered to be parking ticket _risk_. 
-5) 
+
 #### Analysis
 
 I looked for patterns of inequity in a variety of ways. I began by looking for relationships between racial demographics of each Census Tract and the parking ticket risk. I found overall no comprehensive relationship between any racial makeup and ticket risk, but exploring geographically I found that this is because there are some predominantly Black and/or Latinx/Hispanic areas that have _higher_ ticket risk, but also some such neighborhoods with _low_ ticket risk. While race alone does not explain the variability in ticketing, this analysis did pick out certain communities of color that do have increased ticketing.
