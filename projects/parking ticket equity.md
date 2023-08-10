@@ -34,7 +34,7 @@ to actual mappable locations.
 
 <details>
     <summary>
-    I used the the City's Geosupport tool, a custom (and finicky) geocoder for New York City addresses, to locate these tickets. 
+    I used the the City's Geosupport tool, a custom (and finicky) geocoder for New York City addresses, to locate these tickets. <br/>
     </summary>
 
 The Department of City Planning-maintained [Geosupport](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page) is a powerful tool, but also somewhat klunky to use and exacting in its needs. 
@@ -53,16 +53,16 @@ Geosupport has voluminous [documentation](https://nycplanning.github.io/Geosuppo
 
 <details>
     <summary>
-    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering.
+    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering. <br/>
     </summary>
 
 I used the [python-geosupport](https://python-geosupport.readthedocs.io/en/latest/) binding to include the search within a Python data pipeline. I needed to do lots of up-front data cleaning to get addresses Geosupport would recognize. Then I built scripts to send addresses through either the house number-street address search or street name-other street name intersection search, depending on what information was available. 
 
 Once I had a working pipeline, I had to scale it up by parallelizing the search (which is surprisingly computationally intensive) and managing memory to run the whole thing on my City-issued computer. So a few overnights later, I had point locations and relevant neighborhoods and Census Tracts for the 80 percent or so of the tickets that could be located.
 
+Finally, I joined together the geographic locations, original ticket data, loaded everything into a sqlite database, and then I had something to work with. 
 </details>
 
-Finally, I joined together the geographic locations, original ticket data, loaded everything into a sqlite database, and then I had something to work with. 
 
 ##### Building proxy measures: estimating ticket risk
 
