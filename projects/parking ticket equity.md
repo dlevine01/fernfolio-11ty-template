@@ -13,7 +13,7 @@ tags:
 
 ### Challenge
 
-An elected city partner asked our office to check on patterns of inequity on where the City wrote parking tickets. Were certain disadvantaged neighborhoods particularly targeted by ticketing or getting more than their fair share of tickets?
+An elected City partner asked the Comptroller’s office look into patterns of inequity on where the City wrote parking tickets. Were certain disadvantaged neighborhoods particularly targeted by ticketing?
 
 ### Data and analysis
 
@@ -29,17 +29,47 @@ NY,,W 28TH ST,CHELSEA PK
 NY,436,27TH DR,
 Q,,B 97 ST,SHORE FT PKWY
 K,60,FURMAN ST,
-
 ```
+
+| Violation County | House Number | Street Name | Intersecting Street
+| ---- | ---- | --- | --- |
+| NY |  | W 28TH ST | CHELSEA PK
+| NY | 436 | 27TH DR | 
+| Q |  | B 97 ST | SHORE FT PKWY
+| K | 60 | FURMAN ST | 
+
+
 to actual mappable locations.
 
-The City’s Department of City Planning maintains [Geosupport](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page), a custom geocoding tool for New York City addresses. On the one hand, this is a much more exacting tool than a familiar Google Maps free search field or geocoder tools like ESRI’s or HERE’s. But, it knows how to handle quirky New York City addresses, like Queens house numbers with dashes in the middle, or repeated street names. It also returns not just point locations, but also other administrative geographies, like Community District, Census Tract, Police Precinct, and street segment code, and projected X/Y point locations.
+<details>
+    <summary>
+    I used the Department of City Planning-maintained [Geosupport](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page) tool, a custom geocoder for New York City addresses. 
+    </summary>
 
-Geosupport takes structured queries for addresses or locations and returns only exact matches; it doesn’t interpolate addresses or guess and similar street names (it can return ‘similar’ street names but this is fairly worthless in practice. Though I am interested at some point in trying [geosupport-suggest](https://github.com/ishiland/geosupport-suggest)), but for an analytic purpose like this one, this can be an advantage: I lose some data that is not geocoded, but I can be confidant that the records I do have are where they say they are.
+Geosupport is a powerful tool, but also somewhat klunky to use and exacting in it's needs. 
 
-Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering:
+On the plus side, it knows how to handle quirky New York City addresses, like Queens house numbers with dashes in the middle, or repeated street names.  And, in addition to latitude/longitude point locations, it also returns local administrative geographies, like Community District, Census Tract, Police precinct, and street segment code, and projected X/Y point locations.
 
-I used the [python-geosupport](https://python-geosupport.readthedocs.io/en/latest/) binding to include the search within a Python data pipeline. I needed to do lots of data cleaning up front to clean up addresses, then send addresses through either the house number-street addresse search or street name-other street name intersection search, depending on what information was available. Once I had a working pipeline, I had to scale it up by parallelizing the search (which is surprisingly computationally intensive) and managing memory to run the whole thing on my City-issued computer. So a few overnights later, I had point locations and relevant neighborhoods and Census Tracts for ~80 percent or so of the tickets that could be located.
+Instead of a catch-all search bar like that on Google Maps (or geocoder tools like ESRI’s or HERE’s), Geosupport is based on structured searches for particular location types, e.g. intersections or property lots or house number-street name addresses. 
+
+Geosupport takes these structured queries for addresses or locations and returns only exact matches; it doesn’t interpolate addresses or guess and similar street names (it can return ‘similar’ street names but this seemed fairly worthless in practice, though I am interested in trying [geosupport-suggest](https://github.com/ishiland/geosupport-suggest) for future applications). For an analytic purpose like this one, this can be an advantage: I lose some data that is not geocoded, but I can be confidant that the records I do have are where they say they are.
+
+Geosupport functions as low-level software. It does have a truly vintage looking desktop interface, but that only handles searches one at a time. Fortunately, there are [Python](https://python-geosupport.readthedocs.io/en/latest/) (and other) bindings to the search to pass data through the Geosupport tool and extract results.
+
+Geosupport has voluminous [documentation](https://nycplanning.github.io/Geosupport-UPG/) but little instruction on how to actually use it. So I had to work out a lot of this, but many thanks to DCP for [this guide](https://medium.com/nyc-planning-digital/geosupport-%EF%B8%8Fpython-a094a2d30fbe).
+
+</details>
+
+<details>
+    <summary>
+    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering:
+    </summary>
+
+I used the [python-geosupport](https://python-geosupport.readthedocs.io/en/latest/) binding to include the search within a Python data pipeline. I needed to do lots of up-front data cleaning to create addresses Geosupport would (mostly) recognize, then send addresses through either the house number-street address search or street name-other street name intersection search, depending on what information was available. 
+
+Once I had a working pipeline, I had to scale it up by parallelizing the search (which is surprisingly computationally intensive) and managing memory to run the whole thing on my City-issued computer. So a few overnights later, I had point locations and relevant neighborhoods and Census Tracts for the 80 percent or so of the tickets that could be located.
+
+</details>
 
 Finally, I joined together the geographic locations, original ticket data, loaded everything into a sqlite database, and then I had something to work with. 
 
@@ -50,7 +80,7 @@ The analysis question was, essentially, about _which_ New Yorkers are targeted f
 2) filtering to tickets issued not on commercials streets (that is, spatially filtering to exclude tickets on streets within or adjacent to commercial or commercial overlay zoning)
 3) removing certain categories of tickets that would not effect residents (e.g. missing bus permit)
 4) normalizing the number of tickets in each tract by the number of households with one or more vehicle. This normalized rate I considered to be parking ticket _risk_. 
-###
+5) 
 #### Analysis
 
 I looked for patterns of inequity in a variety of ways. I began by looking for relationships between racial demographics of each Census Tract and the parking ticket risk. I found overall no comprehensive relationship between any racial makeup and ticket risk, but exploring geographically I found that this is because there are some predominantly Black and/or Latinx/Hispanic areas that have _higher_ ticket risk, but also some such neighborhoods with _low_ ticket risk. While race alone does not explain the variability in ticketing, this analysis did pick out certain communities of color that do have increased ticketing.
