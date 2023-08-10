@@ -34,7 +34,7 @@ to actual mappable locations.
 
 <details>
     <summary>
-    I used the the City's Geosupport tool, a custom (and finicky) geocoder for New York City addresses, to locate these tickets. <br>
+    I used the the City's Geosupport tool, a custom (and finicky) geocoder for New York City addresses, to locate these tickets. 
     </summary>
 
 The Department of City Planning-maintained [Geosupport](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page) is a powerful tool, but also somewhat klunky to use and exacting in its needs. 
@@ -53,7 +53,7 @@ Geosupport has voluminous [documentation](https://nycplanning.github.io/Geosuppo
 
 <details>
     <summary>
-    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering. <br>
+    Actually running addresses through Geosupport, especially 50 million or so records, took some data engineering.
     </summary>
 
 I used the [python-geosupport](https://python-geosupport.readthedocs.io/en/latest/) binding to include the search within a Python data pipeline. I needed to do lots of up-front data cleaning to get addresses Geosupport would recognize. Then I built scripts to send addresses through either the house number-street address search or street name-other street name intersection search, depending on what information was available. 
