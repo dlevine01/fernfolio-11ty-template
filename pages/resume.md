@@ -9,6 +9,12 @@ eleventyNavigation:
 ---
 ### Experience:
 
+**Policy Data Analyst**
+*Office of New York City Comptroller Brad Lander*
+New York, NY | 2023-present
+
+Analyze, find, and generate City data in order to identify and expose inequities in City services, pinpoint ways City agencies can perform better, develop concrete policy reforms, and improve government transparency. 
+
 **Urban Analyst** 
 *Localize.city*
 New York, NY | 2019-2020
