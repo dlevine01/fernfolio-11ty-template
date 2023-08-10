@@ -13,7 +13,18 @@ eleventyNavigation:
 *Office of New York City Comptroller Brad Lander*
 New York, NY | 2023-present
 
-Analyze, find, and generate City data in order to identify and expose inequities in City services, pinpoint ways City agencies can perform better, develop concrete policy reforms, and improve government transparency. 
+Analyze, find, and generate data to identify and expose inequities in City services, pinpoint ways City agencies can perform better, develop concrete policy reforms, and improve government transparency. 
+
+- Engineer structured, spatial data from ad hoc city records.
+- Use a range of statistical, data science, and spatial analytic tools to find credible insights and communicate these findings for policy makers.
+- Build data visualizations and interactive tools to communicate key messages and allow exploration of City data.
+
+**Graduate Research Assistant**
+*NYU Furman Center*
+New York, NY | 2022
+
+* Built data pipelines to extract, transform, and load large-scale, spatial datasets used for critical policy research on affordable housing and urban planning.
+* Created interactive maps and data visualizations.
 
 **Urban Analyst** 
 *Localize.city*
