@@ -6,6 +6,7 @@ summary: Search inequities in where New Yorkers get parking tickets
 tags:
 - spatial analysis
 - policy evaluation
+- data engineering
 ---
 
 <!-- map here. -->
@@ -18,7 +19,7 @@ An elected city partner asked our office to check on patterns of inequity on whe
 
 For a relatively straightforward question, preparing the data and structuring the analysis were no small feat.
 
-#### geocoding
+##### Geocoding
 
 The City’s Department of Revenue publishes on NYC Open Data records of [all parking tickets](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2023/pvqr-7yc4/data)—some 12 million per year—but these records are not geolocated to a point on the map. So the first step for any geographic analysis was to convert locations that could look like:
 
@@ -42,15 +43,15 @@ I used the [python-geosupport](https://python-geosupport.readthedocs.io/en/lates
 
 Finally, I joined together the geographic locations, original ticket data, loaded everything into a sqlite database, and then I had something to work with. 
 
-#### building proxy measures
+##### Building proxy measures
 
 The analysis question was, essentially, about _which_ New Yorkers are targeted for parking tickets. This was not information we had. (Though I took some ultimately fruitless steps to try to get vehicle registration addresses to match with license plate data). Instead I had _where_ tickets were issued. This is an imperfect proxy but I tried to make it a better measure by:
 1) filtering to tickets issued to New York State-registered vehicles;
 2) filtering to tickets issued not on commercials streets (that is, spatially filtering to exclude tickets on streets within or adjacent to commercial or commercial overlay zoning)
 3) removing certain categories of tickets that would not effect residents (e.g. missing bus permit)
 4) normalizing the number of tickets in each tract by the number of households with one or more vehicle. This normalized rate I considered to be parking ticket _risk_. 
-
-#### analysis
+###
+#### Analysis
 
 I looked for patterns of inequity in a variety of ways. I began by looking for relationships between racial demographics of each Census Tract and the parking ticket risk. I found overall no comprehensive relationship between any racial makeup and ticket risk, but exploring geographically I found that this is because there are some predominantly Black and/or Latinx/Hispanic areas that have _higher_ ticket risk, but also some such neighborhoods with _low_ ticket risk. While race alone does not explain the variability in ticketing, this analysis did pick out certain communities of color that do have increased ticketing.
 
@@ -60,7 +61,7 @@ Additionally, I looked at median income or poverty status specifically of _drive
 
 ### Data visualization
 
-![parking tickets data visualization](static/img/parking-tickets-demo-screenshot.png)
+![parking tickets data visualization](/static/img/parking-tickets-demo-screenshot.png)
 
 Without a slam-dunk statistical finding, it was clear that a better way to share these data would be through a multi-faceted visualization that would allow both our initial partners and other interested data explorers to locate what would be most meaningful for them. 
 
