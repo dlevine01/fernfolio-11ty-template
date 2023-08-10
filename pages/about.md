@@ -26,7 +26,7 @@ headShot: /static/img/portrait.jpg
 
 I use spatial analysis, mapping, and data science to understand and interpret interlocking urban challenges. Through grounded research and effective communication, I bring about policy change and practical reform. I work with communities to uncover issues, convey local needs, and advocate for policy change. 
 
-I work as a data policy analyst in the office of New York City Comptroller Brad Lander. I sift through city data to identify and expose inequities, pinpoint ways City government can be more effective, and build tools to allow transparency and encourage engagement in policy making. 
+I work as a data policy analyst in the office of [New York City Comptroller Brad Lander](https://comptroller.nyc.gov). I sift through city data to identify and expose inequities, pinpoint ways City government can be more effective, and build tools to allow transparency and encourage engagement in policy making. 
 
 ---
 
