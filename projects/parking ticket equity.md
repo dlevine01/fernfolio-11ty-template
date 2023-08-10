@@ -1,8 +1,8 @@
 ---
-title: Search for inequities in parking tickets
+title: Look for inequities in parking tickets
 emoji: 🚗
 date: 2023-05-01T00:00:00.000Z
-summary: Search inequities in where New Yorkers get parking tickets
+summary: Search for patterns of inequities in where New Yorkers get parking tickets and put these data on the map to allow interactive exploration.
 tags:
 - spatial analysis
 - policy evaluation
