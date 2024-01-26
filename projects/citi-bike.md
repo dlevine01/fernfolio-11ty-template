@@ -33,6 +33,11 @@ This station-level data could be directly compared with service level requiremen
 
 Initial mapping of the station performance measures showed obvious geographic disparities in service: bikes and docks were generally available in core areas of Manhattan, but across the outer edges of the system in Brooklyn, Queens, the Bronx and upper Manhattan, stations were more frequently unavailable and outages lasted longer. 
 
+<iframe
+  src="/static/files/Fig_3_frequency_unavailable.html>"
+  title="Frequeny stations were unavailable"
+></iframe>
+
 One empty or full station is a problem for riders, but when _all_ the stations across a neighborhood or area have no bikes or no docks, potential riders are stranded. If these area-wide outages are frequent, Citi Bike is no longer a reliable travel mode for riders in that area.
 
 To find clusters of frequent poor service—and to compress the variability in station performance across different measures into an easy classification of “reliable” or “not reliable” —I used a local indicators of spatial association algorithm to pick out the stations that had exceptionally poor service (compared to citywide averages), and whose neighboring stations _also_ had poor service on the same measures. This data-driven method showed the worst clusters of stations.
